@@ -1,9 +1,36 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+for (let num1 = 0; num1 < array.length; num1++){
+  for (let num2 = 0; num2 < array.length; num2++){
+    if (array[num1] + array[num2] === target){
+      return true;
+    }
+  }
 }
+return false;
+
+}
+
+/*I believe this is a more optimized code but doesn't seem to give the
+correct output value that is expected */
+// function hasTargetSum(array, target){
+//   for (let num1, num2 = 0; num1 && num2 < array.length; num1++ && num2++){
+//     if(array[num1] + array[num2] === target){
+//       return true;
+//     }   
+//   }
+//   return false;
+// }
+
+ 
+/* If we console.log the function & input array, target of our own we should
+be able to see our output */
+console.log(hasTargetSum([2,3,4,5,6,7,1], 10))
 
 /* 
   Write the Big O time complexity of your function here
+  
 */
 
 /* 
